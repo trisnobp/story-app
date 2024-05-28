@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">StoryApp</string>
+    <string name="app_logo">App Logo</string>
+    <string name="snap_the_story_app">Snap: The Story App</string>
+    <string name="share_inspire_and_explore_together">Share, Inspire, and Explore Together!</string>
+    <string name="people_sharing">People Sharing</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
