@@ -62,7 +62,7 @@
             style="@style/main_card_view_style"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:cardBackgroundColor="@android:color/holo_blue_dark"
+            app:cardBackgroundColor="@color/orange"
             app:layout_constraintVertical_bias="1.0"
             tools:layout_editor_absoluteX="-54dp">
 

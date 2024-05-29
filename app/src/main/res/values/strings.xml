@@ -13,4 +13,19 @@
     <string name="already_have_an_account">Already have an account?</string>
     <string name="name">Name</string>
     <string name="enter_your_name">Enter your name</string>
+    <string name="snap">Snap</string>
+    <string name="discover_and_share_stories">Discover and Share Stories</string>
+    <string name="welcome_message">Hello, %1$s!</string>
+    <string name="language">Language</string>
+    <string name="log_out">Log out</string>
+    <string name="story_photo">Story photo</string>
+    <string name="date">28/03/2024</string>
+    <string name="add_story">Add Story</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="description">Description</string>
+    <string name="enter_the_description">Enter the description</string>
+    <string name="upload">Upload</string>
+    <string name="random_paragraph">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at enim eget ipsum varius sodales nec sit amet sapien. Nulla consectetur ipsum sapien, a pellentesque quam aliquam sit amet. Praesent nec aliquet purus. Sed nec bibendum dui, at elementum nulla. In dui lorem, convallis eu faucibus nec, tincidunt eu justo. Integer consectetur quam nibh, non suscipit nunc posuere ac. Maecenas eu neque id tortor porttitor faucibus eget vitae lacus. Donec vel lectus vestibulum, lacinia massa quis, posuere nulla.</string>
 </resources>

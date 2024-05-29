@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.dicoding.storyapp.databinding.ActivityMainBinding
 import com.dicoding.storyapp.view.auth.LoginActivity
 import com.dicoding.storyapp.view.auth.RegisterActivity
+import com.dicoding.storyapp.view.story.StoryActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +23,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.signUpButton.setOnClickListener {
             val intent = Intent(this@MainActivity, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.logo.setOnClickListener {
+            val intent = Intent(this@MainActivity, StoryActivity::class.java)
             startActivity(intent)
         }
     }
