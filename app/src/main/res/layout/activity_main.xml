@@ -62,7 +62,7 @@
             style="@style/main_card_view_style"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:cardBackgroundColor="@color/orange"
+            app:cardBackgroundColor="@android:color/holo_blue_dark"
             app:layout_constraintVertical_bias="1.0"
             tools:layout_editor_absoluteX="-54dp">
 
@@ -80,7 +80,8 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/people_sharing" />
+                    app:srcCompat="@drawable/people_sharing"
+                    tools:ignore="ImageContrastCheck" />
 
                 <Button
                     android:id="@+id/sign_in_button"

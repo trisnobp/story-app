@@ -5,6 +5,7 @@ import android.graphics.Canvas
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.AttributeSet
+import android.util.Patterns
 import android.view.MotionEvent
 import android.view.View
 import androidx.appcompat.widget.AppCompatEditText
@@ -19,8 +20,8 @@ class EmailEditText @JvmOverloads constructor(
             }
 
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                if (s.toString().length < 8) {
-                    setError("Password can't be less than 8 characters", null)
+                if (!Patterns.EMAIL_ADDRESS.matcher(s).matches()) {
+                    setError("The format of email address is invalid. Please make sure it looks like this: a@example.com", null)
                 } else {
                     error = null
                 }
