@@ -21,7 +21,7 @@
             android:name=".view.story.DetailStoryActivity"
             android:exported="false" />
         <activity
-            android:name=".view.story.StoryActivity"
+            android:name=".view.story.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".view.auth.RegisterActivity"

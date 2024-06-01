@@ -15,7 +15,7 @@
     <string name="enter_your_name">Enter your name</string>
     <string name="snap">Snap</string>
     <string name="discover_and_share_stories">Discover and Share Stories</string>
-    <string name="welcome_message">Hello, %1$s!</string>
+    <string name="welcome_message">Hello, %1$s</string>
     <string name="language">Language</string>
     <string name="log_out">Log out</string>
     <string name="story_photo">Story photo</string>
@@ -28,4 +28,6 @@
     <string name="upload">Upload</string>
     <string name="random_paragraph">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at enim eget ipsum varius sodales nec sit amet sapien. Nulla consectetur ipsum sapien, a pellentesque quam aliquam sit amet. Praesent nec aliquet purus. Sed nec bibendum dui, at elementum nulla. In dui lorem, convallis eu faucibus nec, tincidunt eu justo. Integer consectetur quam nibh, non suscipit nunc posuere ac. Maecenas eu neque id tortor porttitor faucibus eget vitae lacus. Donec vel lectus vestibulum, lacinia massa quis, posuere nulla.</string>
+    <string name="input_is_invalid">Input is invalid. Please check it again.</string>
+    <string name="input_cant_be_empty">Input can\'t be empty. Please check it again.</string>
 </resources>
