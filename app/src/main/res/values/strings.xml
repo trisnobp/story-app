@@ -30,4 +30,13 @@
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at enim eget ipsum varius sodales nec sit amet sapien. Nulla consectetur ipsum sapien, a pellentesque quam aliquam sit amet. Praesent nec aliquet purus. Sed nec bibendum dui, at elementum nulla. In dui lorem, convallis eu faucibus nec, tincidunt eu justo. Integer consectetur quam nibh, non suscipit nunc posuere ac. Maecenas eu neque id tortor porttitor faucibus eget vitae lacus. Donec vel lectus vestibulum, lacinia massa quis, posuere nulla.</string>
     <string name="input_is_invalid">Input is invalid. Please check it again.</string>
     <string name="input_cant_be_empty">Input can\'t be empty. Please check it again.</string>
+    <string name="no_image_warning">Please input an image first.</string>
+    <string name="this_photo_has_no_description">Please input a description!</string>
+    <string name="story_is_successfully_added">Story is successfully added!</string>
+    <string name="there_is_something_wrong">There is something wrong.</string>
+    <string name="no_media_is_selected">No media is selected</string>
+    <string name="the_format_of_email_address_is_invalid">The format of email address is invalid. Please make sure it looks like this: a@example.com</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="password_warning">Password can\'t be less than 8 characters</string>
 </resources>

@@ -3,6 +3,7 @@ package com.dicoding.storyapp.view.story
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -54,9 +55,13 @@ class HomeActivity : AppCompatActivity() {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
             startActivity(intent)
         }
+
+        binding.localizationButton.setOnClickListener {
+            startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
+        }
     }
 
-    fun provideStories(token: String?) {
+    private fun provideStories(token: String?) {
         homeViewModel.getAllStories(token)
         homeViewModel.isLoading.observe(this) {
             showLoading(it)
@@ -77,5 +82,4 @@ class HomeActivity : AppCompatActivity() {
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
-
 }

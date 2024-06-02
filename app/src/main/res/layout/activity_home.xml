@@ -110,6 +110,7 @@
         android:foregroundGravity="bottom"
         android:backgroundTint="@color/orange"
         app:fabSize="normal"
+        app:tint="@color/dark_blue"
         app:layout_anchor="@id/main_card_view"
         app:layout_anchorGravity="bottom|end"
         app:layout_constraintBottom_toBottomOf="parent"

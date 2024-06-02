@@ -1,7 +1,6 @@
 package com.dicoding.storyapp.viewmodel
 
 import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -13,7 +12,6 @@ import com.dicoding.storyapp.data.remote.retrofit.ApiConfig
 import com.google.gson.Gson
 import retrofit2.Call
 import retrofit2.Response
-
 
 class AuthViewModel : ViewModel() {
 

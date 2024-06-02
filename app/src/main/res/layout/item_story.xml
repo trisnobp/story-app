@@ -24,7 +24,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp">
+            android:layout_height="64dp">
 
             <TextView
                 android:id="@+id/tv_item_name"
@@ -55,10 +55,10 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginTop="12dp"
-                android:layout_marginEnd="92dp"
+                android:layout_marginEnd="8dp"
                 android:contentDescription="@string/story_photo"
                 android:src="@drawable/ic_calendar"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_item_date"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView

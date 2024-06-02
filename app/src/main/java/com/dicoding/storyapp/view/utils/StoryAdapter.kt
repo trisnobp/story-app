@@ -1,15 +1,16 @@
 package com.dicoding.storyapp.view.utils
 
+import android.app.Activity
 import android.content.Intent
-import android.net.Uri
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.app.ActivityOptionsCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.dicoding.storyapp.data.remote.response.ListStoryItem
 import com.dicoding.storyapp.databinding.ItemStoryBinding
+import com.dicoding.storyapp.view.story.DetailStoryActivity
 
 class StoryAdapter: androidx.recyclerview.widget.ListAdapter<ListStoryItem, StoryAdapter.MyViewHolder>(DIFF_CALLBACK) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -22,13 +23,28 @@ class StoryAdapter: androidx.recyclerview.widget.ListAdapter<ListStoryItem, Stor
         holder.bind(story)
     }
 
-    class MyViewHolder(val binding: ItemStoryBinding) : RecyclerView.ViewHolder(binding.root) {
+    class MyViewHolder(private val binding: ItemStoryBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(story: ListStoryItem) {
             Glide.with(itemView)
                 .load(story.photoUrl)
                 .into(binding.ivItemPhoto)
             binding.tvItemName.text = story.name
             binding.tvItemDate.text = DateFormatter.formatDate(story.createdAt!!)
+
+            itemView.setOnClickListener {
+                val intent = Intent(itemView.context, DetailStoryActivity::class.java)
+                intent.putExtra("story", story)
+
+                val optionsCompat: ActivityOptionsCompat =
+                    ActivityOptionsCompat.makeSceneTransitionAnimation(
+                        itemView.context as Activity,
+                        androidx.core.util.Pair(binding.ivItemPhoto, "story_picture"),
+                        androidx.core.util.Pair(binding.tvItemName, "name"),
+                        androidx.core.util.Pair(binding.tvItemDate, "date")
+                    )
+
+                itemView.context.startActivity(intent, optionsCompat.toBundle())
+            }
         }
     }
 

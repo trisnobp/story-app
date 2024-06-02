@@ -7,6 +7,7 @@ import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.View
 import androidx.appcompat.widget.AppCompatEditText
+import com.dicoding.storyapp.R
 
 class PasswordEditText @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null
@@ -20,7 +21,7 @@ class PasswordEditText @JvmOverloads constructor(
 
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
                 if (s.toString().length < 8) {
-                    setError("Password can't be less than 8 characters", null)
+                    setError(context.getString(R.string.password_warning), null)
                 } else {
                     error = null
                 }
@@ -34,7 +35,7 @@ class PasswordEditText @JvmOverloads constructor(
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        hint = "Enter your password"
+        hint = context.getString(R.string.enter_your_password)
         textAlignment = View.TEXT_ALIGNMENT_VIEW_START
     }
 }

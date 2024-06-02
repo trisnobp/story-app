@@ -30,7 +30,7 @@ interface ApiService {
     @POST("stories")
     fun addStory(
         @Header("Authorization") bearerToken: String,
-        @Part("photo") photoFile: MultipartBody.Part,
+        @Part photoFile: MultipartBody.Part,
         @Part("description") storyDescription: RequestBody
     ) : Call<AddStoryResponse>
 }

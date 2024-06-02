@@ -36,9 +36,7 @@ class RegisterActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Kalo pas submit masih empty, terus cek juga apakah masih ada error-nya
         binding.signUpButton.setOnClickListener {
-            // Munculin error dalam bentuk custom toast aja
             val nameField = binding.edRegisterName.text.toString().trim()
             val emailField = binding.edRegisterEmail.text.toString().trim()
             val passwordField = binding.edRegisterPassword.text.toString().trim()
@@ -67,11 +65,15 @@ class RegisterActivity : AppCompatActivity() {
                 }
 
                 authViewModel.registerResponse.observe(this) {
-                    showToast(it.message!!)
-                    val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                    startActivity(intent)
+                    if(it.error!!) {
+                        showToast(it.message!!)
+                    } else {
+                        showToast(it.message!!)
+                        val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                        startActivity(intent)
+                    }
                 }
             }
         }

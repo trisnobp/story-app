@@ -4,9 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.dicoding.storyapp.data.remote.request.RegisterDTO
 import com.dicoding.storyapp.data.remote.response.ListStoryItem
-import com.dicoding.storyapp.data.remote.response.RegisterResponse
 import com.dicoding.storyapp.data.remote.response.StoriesResponse
 import com.dicoding.storyapp.data.remote.retrofit.ApiConfig
 import retrofit2.Call

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">StoryApp</string>
+    <string name="app_logo">App Logo</string>
+    <string name="snap_the_story_app">Snap: Bagikan Ceritamu</string>
+    <string name="share_inspire_and_explore_together">Bagikan, Inspirasi, dan Telusuri Bersama!</string>
+    <string name="people_sharing">Orang-orang saling berbagi</string>
+    <string name="sign_in">Masuk</string>
+    <string name="sign_up">Daftar</string>
+    <string name="back">Kembali</string>
+    <string name="email">Email</string>
+    <string name="password">Kata Sandi</string>
+    <string name="dont_have_account">Belum memiliki akun?</string>
+    <string name="already_have_an_account">Sudah punya akun?</string>
+    <string name="name">Nama</string>
+    <string name="enter_your_name">Masukkan nama anda</string>
+    <string name="snap">Snap</string>
+    <string name="discover_and_share_stories">Telusuri dan Bagikan Cerita</string>
+    <string name="welcome_message">Halo, %1$s</string>
+    <string name="language">Bahasa</string>
+    <string name="log_out">Keluar</string>
+    <string name="story_photo">Foto cerita</string>
+    <string name="date">28/03/2024</string>
+    <string name="add_story">Tambah Cerita</string>
+    <string name="gallery">Galeri</string>
+    <string name="camera">Kamera</string>
+    <string name="description">Deskripsi</string>
+    <string name="enter_the_description">Masukkan deskripsi</string>
+    <string name="upload">Unggah</string>
+    <string name="random_paragraph">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at enim eget ipsum varius sodales nec sit amet sapien. Nulla consectetur ipsum sapien, a pellentesque quam aliquam sit amet. Praesent nec aliquet purus. Sed nec bibendum dui, at elementum nulla. In dui lorem, convallis eu faucibus nec, tincidunt eu justo. Integer consectetur quam nibh, non suscipit nunc posuere ac. Maecenas eu neque id tortor porttitor faucibus eget vitae lacus. Donec vel lectus vestibulum, lacinia massa quis, posuere nulla.</string>
+    <string name="input_is_invalid">Input tidak sesuai. Silakan periksa kembali.</string>
+    <string name="input_cant_be_empty">Input tidak boleh kosong. Silakan periksa kembali.</string>
+    <string name="no_image_warning">Silakan masukkan foto terlebih dahulu.</string>
+    <string name="this_photo_has_no_description">Silakan masukkan deskripsi terlebih dahulu.</string>
+    <string name="story_is_successfully_added">Cerita berhasil ditambahkan!</string>
+    <string name="there_is_something_wrong">Terdapat sesuatu kesalahan.</string>
+    <string name="no_media_is_selected">Tidak ada media yang dipilih</string>
+    <string name="the_format_of_email_address_is_invalid">Format email masih salah. Silakan masukkan email dengan format seperti berikut: a@example.com</string>
+    <string name="enter_your_email">Masukkan email anda</string>
+    <string name="enter_your_password">Masukkan kata sandi anda</string>
+    <string name="password_warning">Kata sandi tidak boleh kurang dari 8 karakter</string>
+</resources>
