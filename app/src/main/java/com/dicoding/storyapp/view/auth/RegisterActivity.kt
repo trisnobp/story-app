@@ -5,18 +5,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.lifecycle.ViewModelProvider
+import androidx.activity.viewModels
 import com.dicoding.storyapp.R
 import com.dicoding.storyapp.data.remote.request.RegisterDTO
 import com.dicoding.storyapp.databinding.ActivityRegisterBinding
 import com.dicoding.storyapp.view.MainActivity
 import com.dicoding.storyapp.viewmodel.AuthViewModel
+import com.dicoding.storyapp.viewmodel.ViewModelFactory
 
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterBinding
-    private val authViewModel: AuthViewModel by lazy {
-        ViewModelProvider(this)[AuthViewModel::class.java]
+    private val authViewModel: AuthViewModel by viewModels<AuthViewModel> {
+        ViewModelFactory.getInstance(this)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

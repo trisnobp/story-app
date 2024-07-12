@@ -2,11 +2,10 @@ package com.dicoding.storyapp.view.custom
 
 import android.content.Context
 import android.graphics.Canvas
-import android.text.Editable
-import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.View
 import androidx.appcompat.widget.AppCompatEditText
+import androidx.core.widget.doOnTextChanged
 import com.dicoding.storyapp.R
 
 class PasswordEditText @JvmOverloads constructor(
@@ -14,23 +13,13 @@ class PasswordEditText @JvmOverloads constructor(
 ) : AppCompatEditText(context, attrs) {
 
     init {
-        addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
-                // Do nothing.
+        doOnTextChanged { text, _, _, _ ->
+            if (text.toString().length < 8) {
+                setError(context.getString(R.string.password_warning), null)
+            } else {
+                error = null
             }
-
-            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                if (s.toString().length < 8) {
-                    setError(context.getString(R.string.password_warning), null)
-                } else {
-                    error = null
-                }
-            }
-
-            override fun afterTextChanged(s: Editable) {
-                // Do nothing.
-            }
-        })
+        }
     }
 
     override fun onDraw(canvas: Canvas) {

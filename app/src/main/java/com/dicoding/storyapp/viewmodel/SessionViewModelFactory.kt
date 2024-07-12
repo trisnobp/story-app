@@ -12,5 +12,4 @@ class SessionViewModelFactory(private val pref: UserPreferences) : ViewModelProv
         }
         throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
     }
-
 }

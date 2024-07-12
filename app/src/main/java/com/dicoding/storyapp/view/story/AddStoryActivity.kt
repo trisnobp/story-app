@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.dicoding.storyapp.R
 import com.dicoding.storyapp.data.local.UserPreferences
@@ -20,6 +21,7 @@ import com.dicoding.storyapp.view.utils.uriToFile
 import com.dicoding.storyapp.viewmodel.AddStoryViewModel
 import com.dicoding.storyapp.viewmodel.SessionViewModel
 import com.dicoding.storyapp.viewmodel.SessionViewModelFactory
+import com.dicoding.storyapp.viewmodel.ViewModelFactory
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -29,8 +31,8 @@ class AddStoryActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAddStoryBinding
     private var currentImageUri: Uri? = null
-    private val addStoryViewModel: AddStoryViewModel by lazy {
-        ViewModelProvider(this)[AddStoryViewModel::class.java]
+    private val addStoryViewModel: AddStoryViewModel by viewModels<AddStoryViewModel> {
+        ViewModelFactory.getInstance(this)
     }
     private lateinit var token: String
 
@@ -40,9 +42,8 @@ class AddStoryActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val pref = UserPreferences.getInstance(application.dataStore)
-        val sessionViewModel = ViewModelProvider(this, SessionViewModelFactory(pref)).get(
-            SessionViewModel::class.java
-        )
+        val sessionViewModel = ViewModelProvider(this, SessionViewModelFactory(pref))[SessionViewModel::class.java]
+
         sessionViewModel.getUserToken().observe(this) {
             token = it!!
         }

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.dicoding.storyapp.R
 import com.dicoding.storyapp.data.local.UserPreferences
@@ -16,12 +17,13 @@ import com.dicoding.storyapp.view.story.HomeActivity
 import com.dicoding.storyapp.viewmodel.AuthViewModel
 import com.dicoding.storyapp.viewmodel.SessionViewModel
 import com.dicoding.storyapp.viewmodel.SessionViewModelFactory
+import com.dicoding.storyapp.viewmodel.ViewModelFactory
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
-    private val authViewModel: AuthViewModel by lazy {
-        ViewModelProvider(this)[AuthViewModel::class.java]
+    private val authViewModel: AuthViewModel by viewModels<AuthViewModel> {
+        ViewModelFactory.getInstance(this)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,9 +32,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val pref = UserPreferences.getInstance(application.dataStore)
-        val sessionViewModel = ViewModelProvider(this, SessionViewModelFactory(pref)).get(
-            SessionViewModel::class.java
-        )
+        val sessionViewModel = ViewModelProvider(this, SessionViewModelFactory(pref))[SessionViewModel::class.java]
 
         binding.backButton.setOnClickListener {
             val intent = Intent(this@LoginActivity, MainActivity::class.java)

@@ -5,6 +5,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.app.ActivityOptionsCompat
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -12,7 +13,7 @@ import com.dicoding.storyapp.data.remote.response.ListStoryItem
 import com.dicoding.storyapp.databinding.ItemStoryBinding
 import com.dicoding.storyapp.view.story.DetailStoryActivity
 
-class StoryAdapter: androidx.recyclerview.widget.ListAdapter<ListStoryItem, StoryAdapter.MyViewHolder>(DIFF_CALLBACK) {
+class StoryAdapter: PagingDataAdapter<ListStoryItem, StoryAdapter.MyViewHolder>(DIFF_CALLBACK) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val binding = ItemStoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MyViewHolder(binding)
@@ -20,7 +21,9 @@ class StoryAdapter: androidx.recyclerview.widget.ListAdapter<ListStoryItem, Stor
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val story = getItem(position)
-        holder.bind(story)
+        if (story != null) {
+            holder.bind(story)
+        }
     }
 
     class MyViewHolder(private val binding: ItemStoryBinding) : RecyclerView.ViewHolder(binding.root) {
@@ -33,7 +36,7 @@ class StoryAdapter: androidx.recyclerview.widget.ListAdapter<ListStoryItem, Stor
 
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, DetailStoryActivity::class.java)
-                intent.putExtra("story", story)
+                intent.putExtra(DetailStoryActivity.STORY_KEY, story)
 
                 val optionsCompat: ActivityOptionsCompat =
                     ActivityOptionsCompat.makeSceneTransitionAnimation(

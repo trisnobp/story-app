@@ -21,9 +21,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         val pref = UserPreferences.getInstance(application.dataStore)
-        val sessionViewModel = ViewModelProvider(this, SessionViewModelFactory(pref)).get(
-            SessionViewModel::class.java
-        )
+        val sessionViewModel = ViewModelProvider(this, SessionViewModelFactory(pref))[SessionViewModel::class.java]
 
         sessionViewModel.getUserToken().observe(this) {
             if (it != null) {

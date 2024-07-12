@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">StoryApp</string>
+    <string name="app_name">Snap</string>
     <string name="app_logo">App Logo</string>
     <string name="snap_the_story_app">Snap: The Story App</string>
     <string name="share_inspire_and_explore_together">Share, Inspire, and Explore Together!</string>
@@ -26,8 +26,7 @@
     <string name="description">Description</string>
     <string name="enter_the_description">Enter the description</string>
     <string name="upload">Upload</string>
-    <string name="random_paragraph">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at enim eget ipsum varius sodales nec sit amet sapien. Nulla consectetur ipsum sapien, a pellentesque quam aliquam sit amet. Praesent nec aliquet purus. Sed nec bibendum dui, at elementum nulla. In dui lorem, convallis eu faucibus nec, tincidunt eu justo. Integer consectetur quam nibh, non suscipit nunc posuere ac. Maecenas eu neque id tortor porttitor faucibus eget vitae lacus. Donec vel lectus vestibulum, lacinia massa quis, posuere nulla.</string>
+    <string name="random_paragraph">" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at enim eget ipsum varius sodales nec sit amet sapien. Nulla consectetur ipsum sapien, a pellentesque quam aliquam sit amet. Praesent nec aliquet purus. Sed nec bibendum dui, at elementum nulla. In dui lorem, convallis eu faucibus nec, tincidunt eu justo. Integer consectetur quam nibh, non suscipit nunc posuere ac. Maecenas eu neque id tortor porttitor faucibus eget vitae lacus. Donec vel lectus vestibulum, lacinia massa quis, posuere nulla."</string>
     <string name="input_is_invalid">Input is invalid. Please check it again.</string>
     <string name="input_cant_be_empty">Input can\'t be empty. Please check it again.</string>
     <string name="no_image_warning">Please input an image first.</string>
@@ -39,4 +38,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at enim eget ipsum 
     <string name="enter_your_email">Enter your email</string>
     <string name="enter_your_password">Enter your password</string>
     <string name="password_warning">Password can\'t be less than 8 characters</string>
+    <string name="please_try_again">Please try again</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="error_parsing">There is an error in parsing the style. Please check again.</string>
+    <string name="no_style_found">No style found. Please check again</string>
 </resources>

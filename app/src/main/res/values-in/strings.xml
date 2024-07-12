@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">StoryApp</string>
+    <string name="app_name">Snap</string>
     <string name="app_logo">App Logo</string>
     <string name="snap_the_story_app">Snap: Bagikan Ceritamu</string>
     <string name="share_inspire_and_explore_together">Bagikan, Inspirasi, dan Telusuri Bersama!</string>
@@ -40,4 +40,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at enim eget ipsum 
     <string name="enter_your_email">Masukkan email anda</string>
     <string name="enter_your_password">Masukkan kata sandi anda</string>
     <string name="password_warning">Kata sandi tidak boleh kurang dari 8 karakter</string>
+    <string name="please_try_again">Silakan coba lagi</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="error_parsing">Terdapat kesalahan saat mengatur style peta. Silakan coba lagi</string>
+    <string name="no_style_found">Tidak ada style peta yang ditemukan. Silakan coba lagi</string>
 </resources>

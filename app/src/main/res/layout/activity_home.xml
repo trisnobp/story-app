@@ -74,6 +74,17 @@
                 app:srcCompat="@drawable/baseline_language_24" />
 
             <ImageView
+                android:id="@+id/location_button"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="80dp"
+                android:contentDescription="@string/language"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_location" />
+
+            <ImageView
                 android:id="@+id/logout_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
